@@ -32,11 +32,11 @@ module Jekyll
         out = env.cache.fetch(key) do
           file = copy(asset, args: args, ctx: ctx)
           proxies.each do |o|
-            obj = o.new(file, {
+            obj = o.new(file, 
               args: args,
               asset: asset,
               ctx: ctx
-            })
+            )
 
             o = obj.process
             file = o if o.is_a?(Pathutil) && file != o

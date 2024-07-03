@@ -169,9 +169,9 @@ module Jekyll
           private
           def map_path(file)
             asset = base.join(env.strip_paths(file))
-            SrcMap.path({
+            SrcMap.path(
               asset: asset, env: env
-            })
+            )
           end
         end
 
